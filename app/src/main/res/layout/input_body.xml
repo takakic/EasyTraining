@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="#B3424A">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.25"
+            android:text="◁"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="#fa8072"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/bodyDate"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:text="▷"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:gravity="right|center"
+            android:layout_weight="0.25"
+            android:background="#fa8072"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/basicContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inputBodyWeightText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:text="体重"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/weightInputEditText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:clickable="false"
+            android:gravity="center"
+            android:hint="入力してください"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:text="Kg"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/weightLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/inputBodyWeightText"
+        android:layout_marginTop="16dp"
+        android:background="#ff808080" />
+
+    <LinearLayout
+        android:id="@+id/basicContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inputBodyFatText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:text="体脂肪"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/fatInputEditText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:clickable="false"
+            android:gravity="center"
+            android:hint="入力してください"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/inputBodyKgText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:text="%"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fatLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/inputBodyWeightText"
+        android:layout_marginTop="16dp"
+        android:background="#ff808080" />
+
+    <LinearLayout
+        android:id="@+id/basicContainer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inputBodyMuscleText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:text="筋肉量"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/muscleInputEditText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:clickable="false"
+            android:gravity="center"
+            android:hint="入力してください"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/inputmuscleKgText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:text="Kg"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/muscleLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#ff808080" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputChestText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="胸囲"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/chestInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/chesCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputNeckText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="首"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/neckInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/neckCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputshoulderText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="肩"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/shouderInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/nshoulderCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputhumerusLeftText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="上腕左"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/humerusLeftInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/humerusLeftCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inpuhumerusRightText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="上腕右"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/humerusRightInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/humerusRightCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputforearmLeftText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="前腕左"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/forearmLeftInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/forearmLeftCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputforearmRightText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="前腕右"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/forearmRightInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/forearmRightCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputtwaistText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="ウエスト"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/waistInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/waistCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputthighLeftText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="太もも左"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/thighLeftInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/thighLeftCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputtthighRightText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="太もも右"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/thighRightInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/thighRightCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputcalfLeftText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="ふくらはぎ左"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/calfLeftInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/calfLeftCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputcalfRightText"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="ふくらはぎ右"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/calfRightInput"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:hint="入力してください"
+                    android:inputType="number|numberDecimal"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/calfRightCm"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="cm"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
